@@ -22,6 +22,8 @@
 		7C20449D19C7344600EB625B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C20448119C7344600EB625B /* CoreData.framework */; };
 		7C2044A519C7344600EB625B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C2044A319C7344600EB625B /* InfoPlist.strings */; };
 		7C2044A719C7344600EB625B /* THDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2044A619C7344600EB625B /* THDiaryTests.m */; };
+		7C2044B219C7373100EB625B /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2044B119C7373100EB625B /* CoreDataStack.m */; };
+		7C2044B519C739C800EB625B /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2044B419C739C800EB625B /* DiaryEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		7C2044A219C7344600EB625B /* THDiaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "THDiaryTests-Info.plist"; sourceTree = "<group>"; };
 		7C2044A419C7344600EB625B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C2044A619C7344600EB625B /* THDiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THDiaryTests.m; sourceTree = "<group>"; };
+		7C2044B019C7373100EB625B /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		7C2044B119C7373100EB625B /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		7C2044B319C739C800EB625B /* DiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEntry.h; sourceTree = "<group>"; };
+		7C2044B419C739C800EB625B /* DiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +123,12 @@
 			children = (
 				7C20448C19C7344600EB625B /* AppDelegate.h */,
 				7C20448D19C7344600EB625B /* AppDelegate.m */,
+				7C2044B019C7373100EB625B /* CoreDataStack.h */,
+				7C2044B119C7373100EB625B /* CoreDataStack.m */,
 				7C20449219C7344600EB625B /* Images.xcassets */,
 				7C20448F19C7344600EB625B /* THDiary.xcdatamodeld */,
+				7C2044B319C739C800EB625B /* DiaryEntry.h */,
+				7C2044B419C739C800EB625B /* DiaryEntry.m */,
 				7C20448419C7344600EB625B /* Supporting Files */,
 			);
 			path = THDiary;
@@ -250,7 +260,9 @@
 			files = (
 				7C20448E19C7344600EB625B /* AppDelegate.m in Sources */,
 				7C20448A19C7344600EB625B /* main.m in Sources */,
+				7C2044B519C739C800EB625B /* DiaryEntry.m in Sources */,
 				7C20449119C7344600EB625B /* THDiary.xcdatamodeld in Sources */,
+				7C2044B219C7373100EB625B /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
