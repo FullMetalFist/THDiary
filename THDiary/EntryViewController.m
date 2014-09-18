@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Giving Tree. All rights reserved.
 //
 
-#import "NewEntryViewController.h"
+#import "EntryViewController.h"
 #import "DiaryEntry.h"
 #import "CoreDataStack.h"
 
-@interface NewEntryViewController ()
+@interface EntryViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation NewEntryViewController
+@implementation EntryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +34,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.entry) {
+        self.textField.text = self.entry.body;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,8 +67,20 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) updateDiaryEntry
+{
+    self.entry.body = self.textField.text;
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    [coreDataStack saveContext];
+}
+
 - (IBAction)doneWasPressed:(id)sender {
-    [self insertDiaryEntry];
+    if (self.entry) {
+        [self updateDiaryEntry];
+    } else {
+        [self insertDiaryEntry];
+    }
     [self dismissSelf];
 }
 
