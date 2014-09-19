@@ -1,27 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lqh-Tu-ap8">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Diary Entries-->
         <scene sceneID="kFE-O5-Ijt">
             <objects>
                 <tableViewController id="Udf-eh-3wI" customClass="EntryListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rkm-sr-T0c">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="182" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rkm-sr-T0c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pPL-WG-Nbr">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="182" id="pPL-WG-Nbr" customClass="EntryTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pPL-WG-Nbr" id="MS5-cy-hkn">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DateLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKS-Eg-gCw">
+                                            <rect key="frame" x="87" y="8" width="225" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <color key="textColor" red="0.23529411759999999" green="0.30588235289999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BodyLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xy-HF-n9c">
+                                            <rect key="frame" x="87" y="37" width="225" height="108"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.23529411764705882" green="0.30588235294117649" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LocationLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qS-Zy-NkO">
+                                            <rect key="frame" x="87" y="153" width="225" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gw7-f6-wi3">
+                                            <rect key="frame" x="8" y="8" width="71" height="71"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-bO-rsN">
+                                            <rect key="frame" x="50" y="76" width="29" height="29"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="bodyLabel" destination="7Xy-HF-n9c" id="zcZ-BE-Wuo"/>
+                                    <outlet property="dateLabel" destination="cKS-Eg-gCw" id="Xm2-hj-9wX"/>
+                                    <outlet property="locationLabel" destination="2qS-Zy-NkO" id="1s2-0u-5eZ"/>
+                                    <outlet property="mainImageView" destination="Gw7-f6-wi3" id="mBr-3o-vkH"/>
+                                    <outlet property="moodImageView" destination="g6v-bO-rsN" id="ePR-vx-spq"/>
                                     <segue destination="gZt-WF-iXM" kind="modal" identifier="edit" id="g4h-uz-QNE"/>
                                 </connections>
                             </tableViewCell>
@@ -31,7 +61,7 @@
                             <outlet property="delegate" destination="Udf-eh-3wI" id="P5i-3v-W4R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0FC-55-WbG">
+                    <navigationItem key="navigationItem" title="Diary Entries" id="0FC-55-WbG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CyB-ji-EDe">
                             <connections>
                                 <segue destination="gZt-WF-iXM" kind="modal" id="daK-Z4-5FS"/>
@@ -86,7 +116,7 @@
         <!--Navigation Controller-->
         <scene sceneID="luL-D5-cOh">
             <objects>
-                <navigationController definesPresentationContext="YES" id="lqh-Tu-ap8" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="lqh-Tu-ap8" customClass="NavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RRf-zU-qPI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -101,7 +131,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vCs-d8-GfK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZt-WF-iXM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZt-WF-iXM" customClass="NavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uYz-Aj-Gry">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

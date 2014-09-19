@@ -27,6 +27,8 @@
 		7C3A68F419C8D1B800686349 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A68F319C8D1B800686349 /* MainStoryboard.storyboard */; };
 		7C3A68F719C8D28200686349 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A68F619C8D28200686349 /* EntryViewController.m */; };
 		7C3A68FA19CA1B5B00686349 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A68F919CA1B5B00686349 /* EntryListTableViewController.m */; };
+		7C87EDD819CC91EE00DBDC02 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87EDD719CC91EE00DBDC02 /* NavigationController.m */; };
+		7C87EDDB19CC9BC200DBDC02 /* EntryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87EDDA19CC9BC200DBDC02 /* EntryTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		7C3A68F619C8D28200686349 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		7C3A68F819CA1B5B00686349 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
 		7C3A68F919CA1B5B00686349 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
+		7C87EDD619CC91EE00DBDC02 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		7C87EDD719CC91EE00DBDC02 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		7C87EDD919CC9BC200DBDC02 /* EntryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryTableViewCell.h; sourceTree = "<group>"; };
+		7C87EDDA19CC9BC200DBDC02 /* EntryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 			children = (
 				7C20448C19C7344600EB625B /* AppDelegate.h */,
 				7C20448D19C7344600EB625B /* AppDelegate.m */,
+				7C87EDD619CC91EE00DBDC02 /* NavigationController.h */,
+				7C87EDD719CC91EE00DBDC02 /* NavigationController.m */,
 				7C2044B019C7373100EB625B /* CoreDataStack.h */,
 				7C2044B119C7373100EB625B /* CoreDataStack.m */,
 				7C3A68F819CA1B5B00686349 /* EntryListTableViewController.h */,
@@ -139,6 +147,8 @@
 				7C20448F19C7344600EB625B /* THDiary.xcdatamodeld */,
 				7C2044B319C739C800EB625B /* DiaryEntry.h */,
 				7C3A68F319C8D1B800686349 /* MainStoryboard.storyboard */,
+				7C87EDD919CC9BC200DBDC02 /* EntryTableViewCell.h */,
+				7C87EDDA19CC9BC200DBDC02 /* EntryTableViewCell.m */,
 				7C3A68F519C8D28200686349 /* EntryViewController.h */,
 				7C3A68F619C8D28200686349 /* EntryViewController.m */,
 				7C2044B419C739C800EB625B /* DiaryEntry.m */,
@@ -277,7 +287,9 @@
 				7C3A68F719C8D28200686349 /* EntryViewController.m in Sources */,
 				7C2044B519C739C800EB625B /* DiaryEntry.m in Sources */,
 				7C20449119C7344600EB625B /* THDiary.xcdatamodeld in Sources */,
+				7C87EDD819CC91EE00DBDC02 /* NavigationController.m in Sources */,
 				7C2044B219C7373100EB625B /* CoreDataStack.m in Sources */,
+				7C87EDDB19CC9BC200DBDC02 /* EntryTableViewCell.m in Sources */,
 				7C3A68FA19CA1B5B00686349 /* EntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
